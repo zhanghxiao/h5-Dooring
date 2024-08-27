@@ -22,21 +22,22 @@
     "yehuozhili <yehuozhili@outlook.com> (https://github.com/yehuozhili))"
   ],
   "scripts": {
-    "start": "export NODE_OPTIONS=--openssl-legacy-provider && umi dev -- editor",
-    "start:win": "set NODE_OPTIONS=--openssl-legacy-provider && umi dev -- editor",
-    "build": "export NODE_OPTIONS=--openssl-legacy-provider && umi build",
-    "build:win": "set NODE_OPTIONS=--openssl-legacy-provider && umi build",
-    "server": "node server.js",
-    "dev": "http-server dist",
-    "docs:dev": "vuepress dev doc",
-    "docs:build": "vuepress build doc",
-    "test-demo": "http-server dist",
-    "postinstall": "umi generate tmp",
-    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
-    "test": "umi-test",
-    "test:coverage": "umi-test --coverage",
-    "nocompress": "cross-env RM_TMPDIR=none COMPRESS=none umi build"
-  },
+  "start": "export NODE_OPTIONS=--openssl-legacy-provider && umi dev -- editor",
+  "start:win": "set NODE_OPTIONS=--openssl-legacy-provider && umi dev -- editor",
+  "build": "export NODE_OPTIONS=--openssl-legacy-provider && umi build",
+  "build:win": "set NODE_OPTIONS=--openssl-legacy-provider && umi build",
+  "server": "node server.js",
+  "dev": "http-server dist",
+  "docs:dev": "vuepress dev doc",
+  "docs:build": "vuepress build doc",
+  "test-demo": "http-server dist",
+  "postinstall": "umi generate tmp",
+  "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
+  "test": "umi-test",
+  "test:coverage": "umi-test --coverage",
+  "nocompress": "cross-env RM_TMPDIR=none COMPRESS=none umi build",
+  "dev:build-start": "yarn pkg && yarn start"
+},
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
